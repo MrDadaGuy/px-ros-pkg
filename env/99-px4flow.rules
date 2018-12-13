@@ -1,0 +1,2 @@
+# /etc/udev/rules.d/99-pixhawk.rules
+SUBSYSTEM=="tty", ACTION=="add", ATTRS{idVendor}=="26ac" ATTRS{idProduct}=="0015", SYMLINK+="px4flow", MODE="0666", TAG+="systemd"
