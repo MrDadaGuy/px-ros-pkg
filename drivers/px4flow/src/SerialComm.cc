@@ -208,7 +208,7 @@ SerialComm::readCallback(const boost::system::error_code& error, size_t bytesTra
                 optFlowRadMsg.integrated_ygyro = flowRad.integrated_ygyro;
                 optFlowRadMsg.integrated_zgyro = flowRad.integrated_zgyro;
                 optFlowRadMsg.time_delta_distance_us = flowRad.time_delta_distance_us;
-                optFlowRadMsg.distance = flowRad.distance;
+                optFlowRadMsg.distance = 0.1; // hard coded, was flowRad.distance;
                 optFlowRadMsg.temperature = flowRad.temperature/100.0f;
                 optFlowRadMsg.quality = flowRad.quality;
 
